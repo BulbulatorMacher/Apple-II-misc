@@ -1,0 +1,118 @@
+                  The Options Program
+
+     The OPTIONS program on the CPM disk is designed  to 
+allow  the RAMDISK to be attached to the APPLE either as 
+one or two drives with the interface card in either slot 
+4 or 5 which are reserved for disk drives by the system. 
+If  it  is  decided to use the RAMDISK as  a  two  drive 
+device  then a choice between 128Kbyte  (standard  APPLE 
+size)  or 160Kbyte (maximum with the RAMDISK) drives  is 
+offered. If the single drive option is selected then the 
+resulting  drive  is  a 320Kbyte drive  which  for  most 
+applications will be the preferred configuration.
+     The  program when run creates loader programs  with 
+names  indicating  the configuration which  will  result 
+from  their execution after a switch on  - providing  of 
+course that the RAMDISK is attached to the corresponding 
+slot. A loader program installs the interfacing programs 
+and  informs CPM of their existence.  This is only  done 
+once  following  a  switch on or cold  boot.  Running  a 
+loader  twice will lose the system necessitating  a  re-
+boot. 
+     Running the program is simple. Boot the CPM system, 
+insert  a disk containing the OPTIONS.COM file and  type 
+<disk designation:>OPTIONS. If the disk is placed in the 
+boot  drive (A:) the disk designation may be omitted  as 
+usual  but  the disk must then have a copy  of  the  CPM 
+system on it as well as the OPTIONS.COM file. 
+
+     You  will  then be faced with  this  display.  (The 
+underlining  does not appear on the screen nor does  the 
+lower case on a normal APPLE screen)
+
+AXLON RAMDISK INTERFACE GENERATOR
+
+This generator produces a program to
+attach the AXLON RAMDISK to the CPM
+system. The program name is determined
+by the configuration options selected.
+The currently selected options give 
+SL56C5C .COM as the program name.
+
+Accept this configuration ? Y
+
+S....D)ouble or S)ingle drive
+L....L)arge or N)ormal capacity
+5....5)6k or 4)4k system
+6
+C....C)lear or P)reserve contents
+5....RAMDISK in slot 4) or 5)
+C....first drive designation
+  ....second drive if configured
+
+Type <RETURN> to accept the defaults
+
+The cursor is on the Y of the
+'Accept this configuration ? Y' 
+line  initially.  You  will note that the  program  name 
+selected  matches the left hand option column  and  this 
+match is maintained throughout your interaction with the 
+program.  The name changes as you make your choices.  If 
+the  option offered is acceptable and you indicate  this 
+with  any one of <RETURN>,Y,or y the program correspond
+ing  to the choices displayed is filed on the  currently 
+logged disk under the displayed filename.  A response of 
+n or N is echoed to the screen and causes the cursor  to 
+move  to  the first position for your choice.  Here  the 
+acceptable inputs are D or S.  If D is selected then  it 
+is  echoed  and  the  filename is amended  in  both  the 
+vertical  and horizontal displays to contain  two  drive 
+designations  corresponding  to the  currently  selected 
+slot  (C:  and D:  for slot 5 E:  and F:  for slot 4  to 
+maintain  compatibility with the CPM  conventions).  You 
+are  then  offered large (160K) drives or normal  (128K) 
+drives  - an  offer which is not made if  you  select  a 
+single  drive system when the name is automatically mod
+ified  to  imply a large (320k in this case)  drive  and 
+only one drive designation (C: or E: depending on slot). 
+After  determination of the drive size the cursor  moves 
+to the 5 of the system size line to determine whether  a 
+44K or 56K system is needed. The second character of the 
+size  specification is automatically updated.  The  next 
+offer  is  whether  to clear or  preserve  the  existing 
+contents  of  the  RAMDISK.  (You will  need  to  create 
+programs   for  each  of  these  options  as  a  RAMDISK 
+previously used on some other system than CPM or  other
+wise corrupted will need initialising.) The final option 
+is  the specification of the slot in which the interface 
+card  for the RAMDISK is to be placed.  Here the accept
+able options are slots 4 or 5.  The cursor then  returns 
+to its original position and displays a Y as the default 
+decision.  This  process  may then be repeated until  an 
+acceptable configuration is selected.
+     At all times the displayed filename is a valid name 
+and no invalid inputs are accepted.
+    When  acceptance of a configuration is indicated the 
+loader program is written to disk as described above and 
+the program terminates.
+
+     Resulting from the use of OPTIONS you will obtain a 
+number  of secondary programs (inelegantly named but  of 
+course  you  may  later  give them  names  of  your  own 
+choosing) the use of which is simple.  At any time after 
+booting  you run the secondary program you have  created 
+once only and it attaches the RAMDISK.  If you are using 
+a  P)reserve  option program then no change  to  RAMDISK 
+contents is made and you must ensure that they (the con
+tents) were created with a compatible program (same disk 
+size  is  all that is necessary).  You may then use  the 
+RAMDISK  freely.  The secondary program must not be  run 
+twice  but  there  is  no reason  why  two  RAMDISKs  in 
+different slots should not be attached,  each by running 
+its  appropriate loader,  nor why RAMCARDS such  as  the 
+SATURN  disk  emulators  should not be used as  long  as 
+the  power  supply can cope with them and  their  inter
+facing programs are run first. 
+     None  of the user I/O space is used by  OPTIONS  or 
+its  resulting  loaders and so non-standard  peripherals 
+can  be  used  as described in  the MCIROSOFT  manuals.

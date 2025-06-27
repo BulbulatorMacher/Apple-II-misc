@@ -1,0 +1,14 @@
+1331401 G2 2.2		ACE 1000 rom 0xF800 - welcome text: ACE 1000 v2.2
+1331402 G3 2.0		ACE 1000/1200 rom 0xF000
+1331403 G5 2.0		ACE 1000/1200 rom 0xE800
+1331404 G7 2.0		ACE 1000/1200 rom 0xE000
+1331405 G8 2.0		ACE 1000/1200 rom 0xD800
+1331406 G10 2.0		ACE 1000/1200 rom 0xD000
+1331407 A2 1.0		disk controller card - rebranded MICRO-SCI A2 (changed welcome text)
+1331409 U7		ACE 1000 character ROM
+1331411 U24		80 column display card character rom
+1331412 		80 column display card firmware rom
+1331413 V 1.2		Dual Interface Card
+1331414 U12		ACE 80 firmware - the same as Applicard v9 (differs only with serial number and checksum)
+1331419 G2 2.3		ACE 1200 rom 0xF800 - differs from 1331401 only with the welcome text: ACE 1200 v2.3
+1331424 		80 column display card firmware rom
